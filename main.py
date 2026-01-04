@@ -19,12 +19,12 @@ from ml.data import process_data, get_categorical_features
 from ml.model import inference, load_model, load_encoder
 
 
-# DVC pull on Heroku
-if "DYNO" in os.environ and os.path.isdir(".dvc"): # pragma: no cover
-    os.system("dvc config core.no_scm true")
-    if os.system("dvc pull") != 0:
-        exit("dvc pull failed")
-    os.system("rm -r .dvc .apt/usr/lib/dvc")
+# # DVC pull on Heroku
+# if "DYNO" in os.environ and os.path.isdir(".dvc"): # pragma: no cover
+#     os.system("dvc config core.no_scm true")
+#     if os.system("dvc pull") != 0:
+#         exit("dvc pull failed")
+#     os.system("rm -r .dvc .apt/usr/lib/dvc")
 
 
 # Global variables for model and encoders
