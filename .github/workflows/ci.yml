@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false   # If Python 3.13 fails, allow Python 3.11 to finish
       matrix:
-        python-version: ["3.110"]
+        python-version: ["3.11"]
 
     steps:
       - name: Checkout Repository
