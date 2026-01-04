@@ -3,6 +3,7 @@ Data processing functions for the Census Income Classification pipeline.
 """
 
 import numpy as np
+import pandas as pd
 from sklearn.preprocessing import LabelBinarizer, OneHotEncoder
 
 
