@@ -14,7 +14,7 @@ jobs:
     timeout-minutes: 15  # Stops the job if it hangs, preventing wasted minutes
 
     strategy:
-      fail-fast: false
+      fail-fast: false   # If Python 3.13 fails, allow Python 3.11 to finish
       matrix:
         python-version: ["3.12.7"]
 
