@@ -15,7 +15,7 @@ import json
 
 
 # Update this with your deployed Heroku app URL
-API_URL = "https://your-app-name.herokuapp.com"
+API_URL = "https://census-income-classifier.onrender.com/"
 
 
 def test_get_root():

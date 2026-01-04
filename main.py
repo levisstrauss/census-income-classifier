@@ -7,7 +7,6 @@ This API provides endpoints for:
 - POST /predict: Model inference for income prediction
 """
 
-import os
 from contextlib import asynccontextmanager
 import pandas as pd
 from fastapi import FastAPI
