@@ -1,9 +1,18 @@
+"""
+Data processing functions for the Census Income Classification pipeline.
+"""
+
 import numpy as np
 from sklearn.preprocessing import LabelBinarizer, OneHotEncoder
 
 
 def process_data(
-    X, categorical_features=[], label=None, training=True, encoder=None, lb=None
+    X,
+    categorical_features=[],
+    label=None,
+    training=True,
+    encoder=None,
+    lb=None
 ):
     """ Process the data used in the machine learning pipeline.
 
@@ -68,3 +77,42 @@ def process_data(
 
     X = np.concatenate([X_continuous, X_categorical], axis=1)
     return X, y, encoder, lb
+
+
+def load_data(filepath):
+    """
+    Load the census data from a CSV file.
+
+    Inputs
+    ------
+    filepath : str
+        Path to the CSV file.
+
+    Returns
+    -------
+    data : pd.DataFrame
+        Loaded data.
+    """
+    data = pd.read_csv(filepath)
+    return data
+
+
+def get_categorical_features():
+    """
+    Return the list of categorical features in the census dataset.
+
+    Returns
+    -------
+    cat_features : list[str]
+        List of categorical feature names.
+    """
+    return [
+        "workclass",
+        "education",
+        "marital-status",
+        "occupation",
+        "relationship",
+        "race",
+        "sex",
+        "native-country",
+    ]
