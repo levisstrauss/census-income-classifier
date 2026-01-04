@@ -1,10 +1,6 @@
-from ml.data import (
-    process_data,
-    load_data
-)
+from ml.data import process_data, load_data, get_categorical_features
 
 from ml.model import (
-    get_categorical_features,
     train_model,
     compute_model_metrics,
     inference,
